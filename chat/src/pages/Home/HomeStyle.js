@@ -15,3 +15,7 @@ export const mainBox = styled.div`
     background-color: white;
     border-radius: 15px;
 `
+
+export const friends = styled.div`
+
+`
