@@ -29,6 +29,15 @@ export const buttons = styled.div`
     width: 100%;
     height: 75%;
     background-color: black;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+
+`
+export const btn = styled.button`
+    width: 25%;
+    height: 20%;
+    background-color: white;
+    margin: 0;
+    color: white;
+    border-width: 0.1px;
+    font-size: 24px;
+    font-weight: 400;
 `
