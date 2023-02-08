@@ -6,7 +6,6 @@ export const container = styled.div`
     background-color: rgb(89,89,89);
     border: black;
     border-width: 1px;
-    border-radius: 10px;
     margin: 50px;
 `
 
@@ -29,7 +28,6 @@ export const buttons = styled.div`
     width: 100%;
     height: 75%;
     background-color: black;
-
 `
 export const btn = styled.button`
     width: 25%;
