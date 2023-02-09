@@ -5,6 +5,7 @@ export default function Calc() {
     const [operations, setOperations] = useState([]);
 
     const handleClick = (value) => {
+        setDisplayValue(displayValue === "0" ? value : displayValue + value);
         setOperations([...operations, value]);
     };
 
