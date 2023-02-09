@@ -13,7 +13,8 @@ export default function Calc() {
             const expression = operations.join("");
             setDisplayValue(eval(expression).toString());
             setOperations([]);
-        } catch (error) {
+        }
+        catch (error) {
             setDisplayValue("Error");
             setOperations([]);
         }
