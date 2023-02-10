@@ -4,10 +4,10 @@ import WordChecklist from './components/word/word';
 
 function App() {
   return (
-    <>
-    <Calc/>
-    <WordChecklist/>
-    </>
+    <div className='App'>
+      <Calc/>
+      <WordChecklist/>
+    </div>
   );
 }
 

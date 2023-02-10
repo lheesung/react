@@ -1,9 +1,10 @@
 import React, { useState } from "react";
+import * as W from "./wordStyle";
 
-const WordChecklist = () => {
+export default function WordChecklist(){
   const [wordList, setWordList] = useState([
-    { word: "hello", checked: false },
-    { word: "world", checked: false }
+    { word: "Add Some", checked: false },
+    { word: "Words", checked: false }
   ]);
   const [newWord, setNewWord] = useState("");
 
@@ -19,17 +20,21 @@ const WordChecklist = () => {
   };
 
   const addWord = () => {
-    if (newWord.trim() === "") return;
+    if (newWord.trim() === "") return; // .trim : 문자열 좌우 공백 제거
     setWordList([...wordList, { word: newWord, checked: false }]);
     setNewWord("");
   };
 
   const deleteWord = index => {
     setWordList(wordList.filter((word, i) => i !== index));
+    /*
+    주어진 함수의 테스트를 통과하는 모든 요소를 모아(true ? 유지 : false ? 버림 : "") 새로운 배열로 반환함. 
+    callback 함수는 호출되는 배열을 변화시키지 않음.
+    */
   };
 
   return (
-    <div>
+    <W.container>
       <ul>
         {wordList.map((word, index) => (
           <li key={index}>
@@ -50,8 +55,7 @@ const WordChecklist = () => {
         onChange={e => setNewWord(e.target.value)}
       />
       <button onClick={addWord}>Add</button>
-    </div>
+    </W.container>
   );
 };
 
-export default WordChecklist;
