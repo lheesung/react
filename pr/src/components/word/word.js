@@ -10,7 +10,7 @@ export default function WordChecklist(){
 
   const toggleCheck = index => {
     setWordList(
-      wordList.map((word, i) => {
+      wordList.map((word, i) => { // map: 각 요소에 대하여 제공된 함수를 적용해서 새 배열은 만듦.
         if (i === index) {
           return { ...word, checked: !word.checked };
         }
@@ -20,7 +20,7 @@ export default function WordChecklist(){
   };
 
   const addWord = () => {
-    if (newWord.trim() === "") return; // .trim : 문자열 좌우 공백 제거
+    if (newWord.trim() === "") return; // .trim : 문자열 좌우 공백을 제거함.
     setWordList([...wordList, { word: newWord, checked: false }]);
     setNewWord("");
   };
@@ -35,9 +35,9 @@ export default function WordChecklist(){
 
   return (
     <W.container>
-      <ul>
+      <W.wordList>
         {wordList.map((word, index) => (
-          <li key={index}>
+          <W.showList key={index}>
             <input
               type="checkbox"
               checked={word.checked}
@@ -45,9 +45,9 @@ export default function WordChecklist(){
             />
             {word.word}
             <button onClick={() => deleteWord(index)}>Delete</button>
-          </li>
+          </W.showList>
         ))}
-      </ul>
+      </W.wordList>
       <input
         type="text"
         placeholder="Add word"

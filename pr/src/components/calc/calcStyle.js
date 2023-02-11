@@ -6,7 +6,6 @@ export const container = styled.div`
     background-color: rgb(89,89,89);
     border: black;
     border-width: 1px;
-    margin: 50px;
 `
 
 export const display = styled.div`
