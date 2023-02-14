@@ -23,7 +23,7 @@ export default function PlayRandomMoveEngine() {
     const move = makeAMove({
       from: sourceSquare,
       to: targetSquare,
-      promotion: "q", // always promote to a queen for example simplicity
+      promotion: "e", // always promote to a queen for example simplicity
     });
 
     // illegal move
