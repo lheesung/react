@@ -1,4 +1,4 @@
-import Chs from "./components/Chess";
+import Chs from "./components/Chs";
 
 
 function App() {
