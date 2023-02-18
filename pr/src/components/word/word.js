@@ -38,7 +38,7 @@ export default function WordChecklist(){
       <W.wordList>
         {wordList.map((word, index) => (
           <W.showList key={index}>
-            <input
+            <W.inputBox
               type="checkbox"
               checked={word.checked}
               onChange={() => toggleCheck(index)}
@@ -48,13 +48,13 @@ export default function WordChecklist(){
           </W.showList>
         ))}
       </W.wordList>
-      <input
+      <W.inputBox
         type="text"
         placeholder="Add word"
         value={newWord}
         onChange={e => setNewWord(e.target.value)}
       />
-      <button onClick={addWord}>Add</button>
+      <W.submitBtn onClick={addWord}>Add</W.submitBtn>
     </W.container>
   );
 };

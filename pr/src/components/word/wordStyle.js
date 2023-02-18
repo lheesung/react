@@ -20,4 +20,16 @@ export const showList = styled.li`
     border-style: solid;
     padding: 10px;
 `
-
+export const inputBox = styled.input`
+    border: none;
+    width: 70%;
+    height: 50px;
+    margin: 10px;
+`
+export const submitBtn = styled.button`
+    width: 15%;
+    height: 50px;
+    margin: 10px;
+    border: none;
+    background-color: #86E57F;
+`
