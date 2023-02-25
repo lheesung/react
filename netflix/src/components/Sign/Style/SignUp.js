@@ -3,6 +3,9 @@ import styled from "styled-components";
 export const container = styled.div`
     width: 100vw;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 `
 
 export const Header = styled.nav`
@@ -29,4 +32,45 @@ export const Btn = styled.button`
     border: none;
     border-radius: 3px;
     margin-right: 50px;
+`
+export const textBox = styled.div`
+    margin-top: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+`
+
+export const mainText = styled.h1`
+    font-size: 66px;
+    margin: 0;
+`
+
+export const subText = styled.h2`
+    font-size: 22px;
+`
+
+export const submitBox = styled.div`
+    width: 800px;
+    height: 70px;
+    display: flex;
+`
+
+export const inputBox = styled.input`
+    border: none;
+    width: 70%;
+    height: 100%;
+    ::placeholder{
+        margin-left: 30px;
+    }
+`
+
+export const submit = styled.button`
+    width: 29%;
+    height: 103%;
+    border: none;
+    background-color: #e50914;
+    font-size: 36px;
+    color: white;
+    font-weight: 400;
 `
