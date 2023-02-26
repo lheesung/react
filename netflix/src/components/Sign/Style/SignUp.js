@@ -66,7 +66,7 @@ export const inputBox = styled.input`
 `
 
 export const submit = styled.button`
-    width: 29%;
+    width: 100%;
     height: 103%;
     border: none;
     background-color: #e50914;
