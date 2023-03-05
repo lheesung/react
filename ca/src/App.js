@@ -2,8 +2,8 @@ import "./App.css"
 import { useState } from 'react';
 
 function App() {
-  let post = 'Hello World!';
-  let [postName,setPost] = useState('Arsenal'); // 자주 변경될 것 같은 돔은 useState 로 관리.
+  let [postName,setPost] = useState(['Hello', 'World', '!!!!!']); // 자주 변경될 것 같은 돔은 useState 로 관리.
+  let [like,setLikes] = useState(0);
   let [logo, setLogo] = useState('React Blog');
   return (
     <div className="App">
@@ -11,9 +11,24 @@ function App() {
         <h1>{logo}</h1>
       </div>
       <div className="list">
-        <h1>{postName}</h1>
+        <h1>{postName[0]} <span onClick={() => {setLikes(like++)}}>👍</span> {like} </h1>
         <p>date</p>
       </div>
+
+      <div className="list">
+        <h1>{postName[1]}</h1>
+        <p>date</p>
+      </div>
+
+      <div className="list">
+        <h1>{postName[2]}</h1>
+        <p>date</p>
+      </div>
+      <button onClick={() => {
+        let copy = [...postName];
+        copy[0] = 'Hola';
+        setPost(copy);
+        }}>change state</button>
     </div>
   );
 }
