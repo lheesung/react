@@ -10,6 +10,13 @@ function App() {
       <div className="nav">
         <h1>{logo}</h1>
       </div>
+      
+      <button onClick={() => {
+        let copy = [...postName];
+        copy[0] = 'Hola';
+        setPost(copy);
+        }}>change state</button>
+
       <div className="list">
         <h1>{postName[0]} <span onClick={() => {setLikes(like++)}}>👍</span> {like} </h1>
         <p>date</p>
@@ -24,13 +31,19 @@ function App() {
         <h1>{postName[2]}</h1>
         <p>date</p>
       </div>
-      <button onClick={() => {
-        let copy = [...postName];
-        copy[0] = 'Hola';
-        setPost(copy);
-        }}>change state</button>
+      <Modal />
     </div>
   );
+}
+
+function Modal(){
+  return(
+    <div className="modal">
+        <h4>제목</h4>
+        <p>내용</p>
+        <p>날짜</p>
+      </div>
+  )
 }
 
 export default App;
