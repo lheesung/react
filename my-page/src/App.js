@@ -1,8 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
-import { Canvas } from "react-three-fiber"
-function App() {
-  return <Canvas></Canvas>
+import { useState } from "react"
+
+export default function App(){
+  // const [text,setText] = useState("");
+  const handleOnKeyPress = e => {
+    if (e.key === 'Enter') {
+      console.log(e.target.value)
+      e.target.value = ""
+    }
+  };
+  const handleInput = () => {}
+  return(
+    <>
+    <input  onChange={handleInput} onKeyPress={handleOnKeyPress}></input>
+    </>
+  )
 }
 
-export default App;
+function a(props){
+  return(
+    <>
+    
+    </>
+  )
+}
