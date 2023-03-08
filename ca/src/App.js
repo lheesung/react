@@ -5,14 +5,13 @@ import Modal from "./Modal"
 function App() {
   let [postName, setPost] = useState(['Hello', 'World', '!!!!!']); // 자주 변경될 것 같은 값은 useState 로 관리.
   let [like, setLikes] = useState([0, 0, 0]);
-  let [logo, setLogo] = useState('React Blog');
   let [modal, setModal] = useState(false);
   const [input, setInput] = useState('');
 
   return (
     <div className="App">
       <div className="nav">
-        <h1>{logo}</h1>
+        <h1>React Blog</h1>
       </div>
       {postName.map(function (a, i) {
         return (
@@ -27,6 +26,11 @@ function App() {
               }}>👍 {like[i]}</span>
             </h1>
             <p>date</p>
+            <button onClick={() => {
+              let copy = [...postName];
+              copy.splice(i, 1);
+              setPost(copy);
+            }}>delete post</button>
           </div>
         )
       })}
@@ -38,9 +42,11 @@ function App() {
         }}
       />
       <button onClick={() => {
-        let copy = [...postName];
-        copy.unshift(input); // copy array 에 ()안 요소 추가.
-        setPost(copy);
+        if(input){
+          let copy = [...postName];
+          copy.unshift(input); // copy array 에 ()안 요소 추가.
+          setPost(copy);
+        }
       }}>add post</button>
     </div>
   );
