@@ -2,9 +2,16 @@ import { useState } from "react"
 
 export default function App(){
   const [text,setText] = useState(false);
+  const [message,setMessage] = useState(["", ]);
   const handleOnKeyPress = e => {
+    if(e.target.value === ""){
+      setText(false);
+    }
     if (e.key === 'Enter') {
-      console.log(e.target.value)
+      setMessage(e.target.value);
+      const arr = Array.from(message);
+      arr.unshift(e.target.value);
+      console.log(e.target.value);
       e.target.value = ""
       setText(true);
     }
@@ -13,14 +20,7 @@ export default function App(){
   return(
     <>
     <input  onChange={handleInput} onKeyPress={handleOnKeyPress}></input>
-    </>
-  )
-}
-
-function a(props){
-  return(
-    <>
-    
+    {text ?  <div>{message}</div> : null}
     </>
   )
 }
