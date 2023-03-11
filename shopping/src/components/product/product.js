@@ -1,7 +1,9 @@
+import * as S from "./Style"
+
 export default function Product(){
     return(
-        <>
-        asdf
-        </>
+        <S.container>
+        
+        </S.container>
     )
 }
