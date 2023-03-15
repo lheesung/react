@@ -1,9 +1,16 @@
 import * as S from "./Style"
 
 export default function Product(props){
+    
     return(
         <S.container>
-            {props.product}
+            <img
+             src={'https://codingapple1.github.io/shop/shoes' + props.i + '.jpg'}
+             style={{
+                width: "100%",
+                height: "100%"
+             }}
+             ></img>
         </S.container>
     )
 }
