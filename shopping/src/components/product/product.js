@@ -1,7 +1,10 @@
 import * as S from "./Style"
+import { data } from "../../data/data";
+import { useState } from "react";
+import second from '../../data/data'
 
 export default function Product(props){
-    
+    const [product] = useState(data);
     return(
         <S.container>
             <img
@@ -11,6 +14,7 @@ export default function Product(props){
                 height: "100%"
              }}
              ></img>
+             <p></p>
         </S.container>
     )
 }
