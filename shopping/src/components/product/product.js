@@ -14,7 +14,7 @@ export default function Product(props){
                 height: "100%"
              }}
              ></img>
-             <p></p>
+             <p>{props.data[i]}</p>
         </S.container>
     )
 }
