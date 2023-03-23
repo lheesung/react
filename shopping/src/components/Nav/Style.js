@@ -7,6 +7,7 @@ export const container = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: fixed;
 `
 export const Logo = styled.h1`
     font-size: 36px;

@@ -25,3 +25,17 @@ export const imgBox = styled.img`
 export const text = styled.div`
     text-align: center;
 `
+
+export const order = styled.button`
+    width: 100px;
+    height: 50px;
+    border-radius: 100px;
+    border: none;
+    background-color: black;
+    color: white;
+    transition: 200ms ease-in-out;
+    :hover{
+        background-color: grey;
+        color: black;
+    }
+`

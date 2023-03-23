@@ -14,6 +14,7 @@ export default function Detail(props){
                     <p>상품설명</p>
                     <p>120000원</p>
                 </D.text>
+                <D.order>주문하기</D.order>
             </D.product>
         </D.container>
         </>

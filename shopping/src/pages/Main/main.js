@@ -3,6 +3,7 @@ import MainBox from "../../components/mainBox/mainBox"
 import Product from "../../components/product/product"
 import { useState } from "react"
 import { data } from "../../data/data"
+import { useNavigate } from "react-router-dom"
 
 
 export default function Main() {

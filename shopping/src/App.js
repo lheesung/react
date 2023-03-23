@@ -1,7 +1,7 @@
 import Main from "./pages/Main/main";
-import Detail from "./pages/Detail/Detail";
+import Detail from "./routes/Detail/Detail";
 import "./App.css"
-import { Route, Routes, Link } from "react-router-dom"
+import { Route, Routes, Link, useNavigate, Outlet } from "react-router-dom"
 function App() {
   return (
     <Routes>

@@ -3,3 +3,11 @@
     align-items: center;
     flex-direction: column;
 }
+
+*{
+    text-decoration: none;
+}
+
+*:visited{
+    color: black;
+}
