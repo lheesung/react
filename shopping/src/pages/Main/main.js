@@ -1,8 +1,8 @@
-import Nav from "../components/Nav/Nav"
-import MainBox from "../components/mainBox/mainBox"
-import Product from "../components/product/product"
+import Nav from "../../components/Nav/Nav"
+import MainBox from "../../components/mainBox/mainBox"
+import Product from "../../components/product/product"
 import { useState } from "react"
-import { data } from "../data/data"
+import { data } from "../../data/data"
 
 
 export default function Main() {

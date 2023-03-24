@@ -2,6 +2,7 @@ import * as S from "./Style"
 import { data } from "../../data/data";
 import { useState } from "react";
 import second from '../../data/data'
+import { Link } from "react-router-dom";
 
 export default function Product(props){
     const [product] = useState(data);
@@ -14,7 +15,7 @@ export default function Product(props){
                 height: "100%"
              }}
              ></img>
-             <p>{props.data[i]}</p>
+             <Link to="/detail"><S.detailBtn>Learn More</S.detailBtn></Link>
         </S.container>
     )
 }
