@@ -17,6 +17,7 @@ export default function Product(props){
              }}
              ></img>
              <Link onClick={()=>{navigate('/detail')}}><S.detailBtn>Learn More</S.detailBtn></Link>
+             {/* <Link to ="/detail"><S.detailBtn>Learn More</S.detailBtn></Link> */}
         </S.container>
     )
 }
